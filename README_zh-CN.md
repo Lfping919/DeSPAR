@@ -100,6 +100,7 @@ DeSPAR/
 │   └── checkpoints/
 │       └── depth_anything_v2_vitb.pth  # 用于盲测推理的深度估计权重
 ├── models/                 # 核心网络架构
+├── outputs/                # 推理结果存放目录 (深度图、掩码图、叠加图)
 ├── tools/                  # 训练、测试、推理脚本
 ├── weights/                # 预训练权重存放目录
 │   ├── pvt_v2_b2.pth
@@ -140,6 +141,9 @@ python tools/demo.py --img 'assets/examples/2229.jpg' --label ship
 ```bash
 python tools/demo.py --img 'assets/2198.jpg'
 ```
+
+**推理结果：** 脚本运行完成后，生成的深度图、显著性掩码以及可视化叠加图（原图 + 掩码）将自动分类保存在 `outputs/` 目录下。
+
 
 ### 3. ONNX 导出与精度验证
 为了打通端侧部署的最后一公里，我们提供了标准的工业级导出与验证流程，完美支持 Stage 1 和 Stage 2 模型的动态轴导出。

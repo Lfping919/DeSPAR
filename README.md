@@ -95,6 +95,7 @@ DeSPAR/
 │   └── checkpoints/
 │       └── depth_anything_v2_vitb.pth  # Depth estimation weights for blind testing
 ├── models/                 # Core network architecture
+├── outputs/                # Inference results (Depth, Mask, Blended overlays)
 ├── tools/                  # Scripts for training, testing, and inference
 ├── weights/                # Directory for pre-trained weights
 │   ├── pvt_v2_b2.pth
@@ -136,6 +137,8 @@ When facing unknown categories of remote sensing images, simply omit the label p
 ```bash
 python tools/demo.py --img 'assets/2198.jpg'
 ```
+
+**Output Description:** After running the script, the generated depth maps, saliency masks, and visual blended overlays (RGB + Mask) will be automatically categorized and saved in the `outputs/` directory.
 
 ### 3. ONNX Export & Precision Verification
 To conquer the last mile of edge deployment, we provide a standard industrial-grade export and verification pipeline, fully supporting dynamic axis export for both Stage 1 and Stage 2 models.
