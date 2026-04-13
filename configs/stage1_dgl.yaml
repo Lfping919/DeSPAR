@@ -1,0 +1,13 @@
+stage: 1
+dataset: "ORSI-4199"
+class_num: 11
+
+data_root: "./data"
+weights_dir: "./weights"
+
+epochs: 60
+warmup_epochs: 5
+batch_size: 8
+img_size: 352
+base_lr: 0.0001
+final_lr: 0.000005

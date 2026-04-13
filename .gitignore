@@ -1,0 +1,22 @@
+# 忽略权重和模型文件
+weights/**/*.pth
+weights/**/*.onnx
+weights/
+*.pth
+*.onnx
+
+# 忽略数据集
+data/ORSI-4199/train_Image/
+data/ORSI-4199/train_GT/
+data/ORSI-4199/train_Depth/
+data/ORSI-4199/test_Image/
+data/ORSI-4199/test_GT/
+data/ORSI-4199/test_Depth/
+
+# 忽略训练日志和缓存
+*.log
+logs/
+tb_logs/
+__pycache__/
+.idea/
+.vscode/
